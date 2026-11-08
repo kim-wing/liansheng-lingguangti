@@ -147,7 +147,7 @@ def build():
         assert new['name'].getName(1,3,1,0x804).toUnicode()=='莲生灵光体'
         assert new['fvar'].axes[0].minValue==400 and new['fvar'].axes[0].maxValue==650
     (OUT/'stroke-audit.json').write_text(json.dumps(changes,ensure_ascii=False,indent=2))
-    note='莲生灵光体 2.2.9\nLiansheng Lingguangti\n\n2026-11-08：由莲生幼稚体 2.2.8 更名。重绘存、荐、鞯、在、茬的共用结构。以局部笔画截面测量校正中文、英文与数字的笔画宽度，减小不同字形尺寸带来的粗细差异。保留 400–650 可变字重与紧凑默认字距。\n\n本字体可免费商用，依 Arphic Public License 分发。请保留随附授权，修改版须标明修改及日期，并按同一授权提供。\n'
+    note='莲生灵光体\nLiansheng Lingguangti\n\n作者：莲生\n正式发布版 2.2.9\n\n手写风格可变字体，支持中文、英文、数字与常用符号。\n字重范围：400–650。可免费用于个人及商业项目。\n\n安装与使用\nmacOS：双击 TTF 文件，在“字体册”中安装。\nWindows：右键 TTF 文件，选择“安装”。\n安装后在应用的字体列表中选择“莲生灵光体”或“Liansheng Lingguangti”。\n字重调节需要应用支持可变字体。\n\n开源与反馈\nhttps://github.com/kim-wing/liansheng-lingguangti\n\n版权与授权\n莲生的原创贡献：Copyright © 2026 莲生。\n本字体依随附 Arphic Public License 分发，保留上游版权声明。\n修改与再分发请遵循完整授权条款，并标明修改内容与日期。\n\nEnglish\nA handwritten-style variable font by Liansheng, supporting Chinese, Latin,\nnumbers and common symbols. Weight range: 400–650. Free for personal\nand commercial use under the accompanying Arphic Public License.\nInstall the TTF and select Liansheng Lingguangti in your application.\nVariable weight adjustment requires a compatible application.\n'
     (OUT/'README.txt').write_text(note)
     with ZipFile(OUT/f'{NAME}.zip','w',ZIP_DEFLATED) as z:
         for p in (FONT,OUT/'README.txt'):z.write(p,p.name)
