@@ -2,3 +2,4 @@ __pycache__/
 .venv/
 .DS_Store
 dist/lingguang-2.2.9/
+dist/lingguang-2.2.10/
